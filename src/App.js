@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Portfolio } from "./components/portfolio/portfolio.jsx";
+import { Store } from "./components/store/store.jsx";
+import { useState, useEffect } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [ stylePath, setStylePath ] = useState("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+    useEffect(() => {
+        var head = document.head;
+        var link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = stylePath;
+        head.appendChild(link);
+        return () => {
+            head.removeChild(link);
+        };
+    }, [stylePath]);
+
+    return (
+        <>
+            <Store />
+            <Portfolio />
+        </>
+    );
 }
 
 export default App;

@@ -1,0 +1,14 @@
+
+.price_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pc_btn {
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(229, 68%, 72%);
+    padding: 15px;
+    justify-self: flex-end;
+}

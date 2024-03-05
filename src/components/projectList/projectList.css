@@ -1,0 +1,17 @@
+.projectList {
+    margin: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.profile_image {
+    
+    min-width: 25%;
+    height: 200px;
+    border-radius: 5px;
+    border: 1px solid hsla(0, 0%, 0%, 0.4);
+    box-shadow: 5px 5px 20px 0px rgba(46, 46, 46, 0.579);
+}
